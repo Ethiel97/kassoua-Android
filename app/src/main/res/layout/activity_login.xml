@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_register_background"
+    android:fitsSystemWindows="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.code.deventhusiast.alibaba.LoginActivity">
+
+    <!-- Login progress -->
+    <!--
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+    -->
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="top"
+        android:background="@drawable/kassoua_cover">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="16dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp"
+            tools:ignore="UnusedAttribute" />
+
+    </FrameLayout>-->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/kassoua_logo"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/email"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_mail_outline"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="17dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="17dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/custombutton_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="17dp"
+            android:text="@string/action_sign_in_short"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--Mot de passe oublie ?--><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/signup_link"
+        style="@style/textView_style"
+        android:layout_marginBottom="25dp"
+        android:text="@string/signup_link" />
+
+    <TextView
+        android:id="@+id/reset_password_link"
+        style="@style/textView_style"
+        android:text="@string/reset_password_link" />
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="--- OU---"
+        android:textSize="25sp" />
+
+    <!--Reseaux sociaux liens-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/facebook_login"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:background="@color/white"
+            android:text="@string/facebook_button"
+            android:textColor="#3b5998"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/google_login"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@color/white"
+            android:text="@string/google_button"
+            android:textColor="#db4733"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

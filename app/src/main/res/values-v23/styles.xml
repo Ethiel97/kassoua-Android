@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="editText_style">
+        <item name="android:drawableTint">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/textColorPrimary</item>
+        <item name="android:background">#20000000</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <!--<item name="android:gravity">center</item>-->
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+    </style>
+</resources>

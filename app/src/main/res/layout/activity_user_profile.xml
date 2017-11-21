@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:fitsSystemWindows="true"
+    tools:context="com.code.deventhusiast.alibaba.UserProfileActivity">
+
+    <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                app:elevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!--PHOTO-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/photo"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignTop="@+id/photo"
+                            android:layout_marginTop="25dp"
+                            android:text="@string/prompt_photo" />
+
+                        <ImageView
+
+                            android:id="@+id/photo"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:inputType="textPersonName"
+                            android:scaleType="centerCrop" />
+                    </RelativeLayout>
+
+                    <!--NOM-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/lname"
+                            android:layout_alignBottom="@+id/lname"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_lname" />
+
+                        <EditText
+                            android:id="@+id/lname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:inputType="textPersonName"
+                            android:outlineProvider="none"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <!--PRENOM-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/fname"
+                            android:layout_alignBottom="@+id/fname"
+                            android:layout_alignParentStart="true"
+                            android:inputType="textPersonName"
+                            android:text="@string/prompt_fname" />
+
+                        <EditText
+                            android:id="@+id/fname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="end|center_vertical"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <!--SEXE-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/gender"
+                            android:layout_alignBottom="@+id/gender"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_gender" />
+
+                        <Spinner
+                            android:id="@+id/gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:entries="@array/context_names"
+                            android:gravity="end|center_vertical"
+                            android:prompt="@string/context_choice" />
+                        <!--
+                                                <EditText
+                                                    android:id="@+id/gender"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:focusedByDefault="false"
+                                                    android:gravity="end|center_vertical"
+                                                    android:padding="12dp" />-->
+                    </RelativeLayout>
+
+                    <!--CODE QR-->
+                </LinearLayout>
+
+                <!--
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/prompt_qrcode" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end|center_vertical" />
+                                </LinearLayout>
+                -->
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!--EMAIL-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/email"
+                            android:layout_alignBottom="@+id/email"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_email" />
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:inputType="textEmailAddress"
+                            android:outlineProvider="none"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <!--PHONE-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/phone"
+                            android:layout_alignBottom="@+id/phone"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_phone" />
+
+                        <EditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:inputType="phone"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <!--ADDRESS-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/address"
+                            android:layout_alignBottom="@+id/address"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_address" />
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+
+                    <!--COUNTRY-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/country"
+                            android:layout_alignBottom="@+id/country"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_country" />
+
+                        <EditText
+                            android:id="@+id/country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!--POSTE-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/job"
+                            android:layout_alignBottom="@+id/job"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_job" />
+
+                        <EditText
+                            android:id="@+id/job"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <!--ENTREPRISE-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/enterprise"
+                            android:layout_alignBottom="@+id/enterprise"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/prompt_enterprise" />
+
+                        <EditText
+                            android:id="@+id/enterprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:focusedByDefault="false"
+                            android:gravity="end|center_vertical"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/colorAccent"
+        app:behavior_hideable="true"
+        app:elevation="100dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="45dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="10dp"
+                android:text="Choisir une photo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/capturePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_photo_camera"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prendre une nouvelle photo"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_photo_library"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choisir une photo existante"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

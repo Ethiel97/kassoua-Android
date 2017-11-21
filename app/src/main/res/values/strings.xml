@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Kassoua</string>
+
+    <string name="nav_item_home">Accueil</string>
+    <string name="nav_item_customization">Personnalisation</string>
+    <string name="nav_item_chat">Discussions</string>
+    <string name="nav_item_account">Mon Compte</string>
+    <string name="nav_item_settings">Parametres</string>
+    <string name="nav_item_favorites">Mes Favoris</string>
+    <string name="nav_item_help">Aide</string>
+    <string name="nav_item_converter">Convertisseur</string>
+    <string name="nav_item_qrcode">Scanner code QR</string>
+    <string name="nav_header_login_text">Se connecter</string>
+    <string name="nav_header_signup_text">S\'inscrire</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="searchbar_placeholder">Recherchez des produits</string>
+    <string name="nav_item_share">Partager</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email"> Email</string>
+    <string name="prompt_password"> Mot de Passe</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Se Connecter</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="signup_link">Pas encore enregistre ? C\'est ici</string>
+    <string name="reset_password_link">Mot de passe oublie ?</string>
+    <string name="facebook_button">Facebook</string>
+    <string name="google_button">Google</string>
+    <string name="prompt_lname"> Nom</string>
+    <string name="prompt_fname"> Prenom</string>
+    <string name="action_signup">S\'inscrire</string>
+    <string name="login_link">Deja enregistre ? Par ici</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_country"> Pays</string>
+    <string name="prompt_enterprise"> Entreprise</string>
+    <string name="user_orders">Vos commandes</string>
+    <string name="user_requests">Vos requetes d\'achat</string>
+    <string name="user_details">Details Utilisateur</string>
+    <string name="enterprise_details">Details Entreprise</string>
+    <string name="user_promotions">Vos promotions</string>
+    <string name="nav_item_explore">Explorer</string>
+    <string name="nav_item_categories">Categories</string>
+    <string name="prompt_gender"> Sexe</string>
+    <string name="prompt_qrcode">Code QR</string>
+    <string name="prompt_phone">Telephone</string>
+    <string name="prompt_address">Adresse</string>
+    <string name="prompt_job">Poste</string>
+    <string name="prompt_photo">Photo</string>
+    <string name="nav_item_publish">Publier</string>
+    <string name="add_product">Valider</string>
+</resources>

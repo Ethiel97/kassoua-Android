@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="context_choice">Votre sexe</string>
+    <string name="category">Categorie</string>
+    <string-array name="context_names">
+        <item>Masculin</item>
+        <item>Feminin</item>
+        <item>Indetermine</item>
+    </string-array>
+</resources>

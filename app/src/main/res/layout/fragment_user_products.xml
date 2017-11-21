@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    tools:showIn="@layout/fragment_products">
+    <!--
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/icon_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"
+            app:isw_active_tint_icon_left="@color/white"
+            app:isw_active_tint_icon_right="@color/colorPrimary"
+            app:isw_background_color="@color/textColorPrimaryDark"
+            app:isw_default_selection="right"
+            app:isw_icon_left="@drawable/ic_format_list_bulleted"
+            app:isw_icon_right="@drawable/ic_grid"
+            app:isw_icon_size="15dp"
+            app:isw_inactive_tint_icon_left="@color/white"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_thumb_color_left="@color/colorPrimary"
+            app:isw_thumb_color_right="@color/white" />
+    -->
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <!--<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize"
+            app:layout="@string/appbar_scrolling_view_behavior">-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/products_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+

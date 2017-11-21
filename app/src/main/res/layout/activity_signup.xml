@@ -1,0 +1,200 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_register_background"
+    android:fitsSystemWindows="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="6dp"
+    tools:context="com.code.deventhusiast.alibaba.SignupActivity">
+
+    <!-- Login progress -->
+    <!--
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+    -->
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="top"
+        android:background="@drawable/kassoua_cover">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="16dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp"
+            tools:ignore="UnusedAttribute" />
+
+    </FrameLayout>-->
+
+    <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/kassoua_logo"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/enterprise"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableTint="@color/transparentBlack"
+            android:hint="@string/prompt_enterprise"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            tools:targetApi="m" />
+
+        <EditText
+            android:id="@+id/country"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_country"
+            android:drawableTint="@color/transparentBlack"
+            android:hint="@string/prompt_country"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            tools:targetApi="m" />
+
+        <EditText
+            android:id="@+id/lname"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_user"
+            android:hint="@string/prompt_lname"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/fname"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_sentiment_satisfied"
+            android:hint="@string/prompt_fname"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/email"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_mail_outline"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="18dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+
+        <Button
+            android:id="@+id/signup_button"
+            style="@style/custombutton_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/action_signup"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <!--Mot de passe oublie ?-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_link"
+            style="@style/textView_style"
+            android:text="@string/login_link" />
+
+
+    </LinearLayout>
+
+
+    <!--Reseaux sociaux liens-->
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/facebook_login"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:background="#3b5998"
+                android:text="@string/facebook_button"
+                android:textColor="@color/white"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/google_login"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:background="#db4733"
+                android:text="@string/google_button"
+                android:textColor="@color/white"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+    -->
+</LinearLayout>
